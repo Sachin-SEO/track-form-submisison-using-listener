@@ -1,0 +1,24 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var formElement = document.querySelector('.thank-you-message');
+    if (formElement) {
+        formElement.addEventListener('submit', function() {
+            dataLayer.push({
+                event: 'contact_form_submit'
+            });
+        });
+    } else {
+        console.error('Element with class .thank-you-message not found.');
+    }
+});
+</script>
+
+or 
+
+<script>
+document.querySelector('.thank-you-message').addEventListener('submit', function() {
+    dataLayer.push({
+        event: 'contact_form_submit'
+    });
+});
+</script>
